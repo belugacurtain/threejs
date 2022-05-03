@@ -1,4 +1,5 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.140.0';
+console.log(THREE);
 
 window.onload = function(){
     const canvas = document.querySelector("canvas.step1");
@@ -24,4 +25,5 @@ window.onload = function(){
 
     renderer.setSize(sizes.width, sizes.height);
     renderer.render(scene, camera);
+
 }
