@@ -1,7 +1,7 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.140.0';
 
 window.onload = function(){
-    const canvas = document.querySelector("canvas.webgl");
+    const canvas = document.querySelector("canvas.step1");
 
     const scene = new THREE.Scene();
     const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
