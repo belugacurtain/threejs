@@ -10,7 +10,7 @@ window.onload = function(){
     //카메라세팅 PerspectiveCamera(시야, 종횡비, 근거리, 원거리)
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-    //렌더러생성
+    //렌더러 변수생성
     const renderer = new THREE.WebGLRenderer();
 
     //렌더러 사이즈
