@@ -2,7 +2,7 @@ import * as THREE from 'https://cdn.skypack.dev/three@0.140.0';
 console.log(THREE);
 
 window.onload = function(){
-    const step1 = document.querySelector('div.step1');
+    const CanvasWrap = document.querySelector('div.canvas_wrap');
 
     /* STEP1 */
     //장면생성
@@ -14,5 +14,5 @@ window.onload = function(){
     //렌더러 사이즈
     renderer.setSize(window.innerWidth, window.innerHeight);
     //지정된 DOM 요소에 canvas DOM 생성
-    step1.appendChild( renderer.domElement );
+    CanvasWrap.appendChild( renderer.domElement );
 }
