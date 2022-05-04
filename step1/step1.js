@@ -2,28 +2,20 @@ import * as THREE from 'https://cdn.skypack.dev/three@0.140.0';
 console.log(THREE);
 
 window.onload = function(){
-    const canvas = document.querySelector("canvas.step1");
+    const step1 = document.querySelector('div.step1');
 
+    //장면생성
     const scene = new THREE.Scene();
-    const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-    const material = new THREE.MeshBasicMaterial({ color: 0x0000ff });
-    const mesh = new THREE.Mesh(geometry, material);
 
-    const sizes = {
-        width: 800,
-        height: 800
-    };
+    //카메라세팅 PerspectiveCamera(시야, 종횡비, 근거리, 원거리)
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-    const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
+    //렌더러생성
+    const renderer = new THREE.WebGLRenderer();
 
-    camera.position.z = 50;
-    scene.add(mesh, camera);
+    //렌더러 사이즈
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
-    const renderer = new THREE.WebGLRenderer({
-        canvas: canvas
-    });
-
-    renderer.setSize(sizes.width, sizes.height);
-    renderer.render(scene, camera);
-
+    //지정된 DOM 요소에 canvas DOM 생성
+    step1.appendChild( renderer.domElement );
 }
