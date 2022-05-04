@@ -20,6 +20,7 @@ window.onload = function(){
     //객체생성 ( BoxGeometry = 박스객체 )
     const geometry = new THREE.BoxGeometry();
     //재료생성 ( MeshBasicMaterial = 기본재료(색상) )
+    //재료생성 ( MeshLambertMaterial = 기본재료(빛을 받을 수 있음) )
     const materiral = new THREE.MeshBasicMaterial({color:0xffffff});
     //큐브변수 ( Mesh = 생성한 객체에 재료 적용(혼합) )
     const cube = new THREE.Mesh(geometry, materiral);
