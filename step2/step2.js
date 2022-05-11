@@ -1,6 +1,6 @@
 import * as THREE from 'https://cdn.skypack.dev/three';
 console.log(THREE);
-
+//Step2 - 큐브만들기
 window.onload = function(){
     const CanvasWrap = document.querySelector('div.canvas_wrap');
 
